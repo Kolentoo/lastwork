@@ -5,7 +5,8 @@
 .breadbox .list-location {text-align: right;margin-top: 6px;}
 .breadbox .list-location .p1 {color:#fff;font-size: 14px;line-height: 30px;margin-right: 10px;}
 
-.selectbox {border-radius: 1px;border: solid 1px #eee;margin-top: 20px;}
+.selectbox {border-radius: 1px;border: solid 1px #eee;margin-top: 20px;transition:all ease 0.3s;height: 195px;overflow: hidden;}
+.selectboxon {height: auto;}
 .selectbox .selectmain {font-size: 16px;margin-top: 3px;}
 .selectbox .selectlist {padding:8px 35px;border-bottom: solid 1px #f0f0f0;}
 .selectbox .maincon {margin-left: 60px;}
@@ -74,6 +75,7 @@ border-left:none;line-height: 38px;}
 .houselist {border-bottom: 1px solid #e7e7e7;position: relative;padding: 20px 0 20px 0;transition:all ease 0.3s;
 transform:scale(1,1);}
 .houselist:hover {box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.11);transform:scale(1.01,1.01);padding-left: 10px;}
+.houselist:hover .allright .compbtn {display: block;}
 .houselist .chart {width: 230px;margin-right: 16px;position: relative;}
 .houselist .chart .recommend {width: 65px;height: 70px;position: absolute;top: -6px;left: -6px;}
 .houselist .detail {margin-left: 20px;}
@@ -97,7 +99,7 @@ margin-right: 5px;display: inline-block;}
 .allright .compare {color:#fff;font-size: 14px;line-height: 26px;margin-top: 2px;}
 .allright .list-star {position: relative;top: 4px;}
 .allright .compbtn {background: url('../images/secondhandlist/listicons.png') no-repeat -121px -60px;width: 117px;height: 37px;
-position: absolute;top: 140px;right: -8px;}
+position: absolute;top: 140px;right: -8px;display: none;}
 .manage-shape {background: url('../images/secondhandlist/shape.jpg') no-repeat;width: 25px;height: 11px;
 margin:10px 0 0 50px;}
 .manage {width: 780px;height: 25px;line-height: 25px;margin-left: 5px;background: #f0f7fd;}
