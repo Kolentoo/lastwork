@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../src/scripts/jquery-1.8.3.min.js"></script>
+    <script type='text/javascript' src='https://cn.bing.com/api/maps/mapcontrol?key=AkZwBAD5SdNHczowuRB4fFb-vTL3_N2TX_fpLBnFiQRkCPv6GDJu4Co-3u2Yd31n'></script>
+    <title>地图</title>
+    <style>
+        .map {width: 600px;height: 400px;margin-bottom: 50px;}
+    </style>
+</head>
+<body>
+    <div class="mapbox">
+        <div class="map" id="map2"></div>
+        <div class="map" id="map3"></div>
+        <div class="map" id="map4"></div>
+    </div>
+
+    <script>
+        $(function(){
+            setTimeout(() => {
+                var map2 = new Microsoft.Maps.Map(document.getElementById('map2'), {credentials: 'AkZwBAD5SdNHczowuRB4fFb-vTL3_N2TX_fpLBnFiQRkCPv6GDJu4Co-3u2Yd31n'});
+                var map3 = new Microsoft.Maps.Map(document.getElementById('map3'), {credentials: 'AkZwBAD5SdNHczowuRB4fFb-vTL3_N2TX_fpLBnFiQRkCPv6GDJu4Co-3u2Yd31n', center: new Microsoft.Maps.Location(47.6215, -122.349329), mapTypeId: Microsoft.Maps.MapTypeId.birdseye, zoom: 18});
+                // //实景
+                var map4 = new Microsoft.Maps.Map(document.getElementById('map4'), {
+                    /* No need to set credentials if already passed in URL */
+                    mapTypeId: Microsoft.Maps.MapTypeId.road,
+                    zoom: 18,
+                    center: new Microsoft.Maps.Location(28.332823, -81.492279) });
+                map4.setView({ mapTypeId: Microsoft.Maps.MapTypeId.streetside });
+            }, 100);
+            
+        })
+        // var map2 = new Microsoft.Maps.Map(document.getElementById('map2'), {credentials: 'AkZwBAD5SdNHczowuRB4fFb-vTL3_N2TX_fpLBnFiQRkCPv6GDJu4Co-3u2Yd31n'});
+        // var map3 = new Microsoft.Maps.Map(document.getElementById('map3'), {credentials: 'AkZwBAD5SdNHczowuRB4fFb-vTL3_N2TX_fpLBnFiQRkCPv6GDJu4Co-3u2Yd31n', center: new Microsoft.Maps.Location(47.6215, -122.349329), mapTypeId: Microsoft.Maps.MapTypeId.birdseye, zoom: 18});
+        // // //实景
+        // var map4 = new Microsoft.Maps.Map(document.getElementById('map4'), {
+        //     /* No need to set credentials if already passed in URL */
+        //     mapTypeId: Microsoft.Maps.MapTypeId.road,
+        //     zoom: 18,
+        //     center: new Microsoft.Maps.Location(28.332823, -81.492279) });
+        // map4.setView({ mapTypeId: Microsoft.Maps.MapTypeId.streetside });
+    </script>
+</body>
+</html>

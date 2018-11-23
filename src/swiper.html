@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../src/styles/core.css">
+    <link rel="stylesheet" href="../src/styles/swiper2.css">
+    <script src="../src/scripts/jquery-1.8.3.min.js"></script>
+    <script src="../src/scripts/swiper2.js"></script>
+    <title>swiper demo</title>
+    <style>
+        .swiperbox {margin:0 auto;}
+        .swiperbox h2{font-size: 30px;font-weight: bold;margin-bottom: 20px;}
+        .content-slide {padding: 20px;color: #fff;}
+        .title {font-size: 25px;margin-bottom: 10px;}
+        .pagination {position: absolute;left: 0;text-align: center;bottom:5px;width: 100%;z-index:200;}
+        .swiper-pagination-switch {display: inline-block;width: 10px;height: 10px;border-radius: 10px;background: #999;box-shadow: 0px 1px 2px #555 inset;margin: 0 3px;
+        cursor: pointer;}
+        .swiper-active-switch {background: #fff;}
+
+        .swiper1 {position: relative;}
+        .swiper1 .container1 {height:400px;}
+        .swiper1 a{font-size: 24px;}
+        .swiper1 .swiper-slide {width: 100%;height: 100%;position: relative;}
+        .swiper1 .swiper-slide img{width: 100%;height: 100%;}
+        .swiper1 .swiper-slide .name {font-size: 16px;text-indent: 30px;color:#fff;background: rgba(0,0,0,0.5);width: 100%;height: 40px;line-height: 40px;
+        position: absolute;bottom: 0;left: 0;}
+
+        .swiper2 {margin-top: 10px;}
+        .swiper2 .swiper-slide {opacity: 0.3;transition:all ease 0.3s;}
+        .swiper2 .swiper-slide:hover {opacity: 1;}
+        .swiper2 .on {opacity: 1;}
+        /* .swiper2 .swiper-slide-active {opacity: 1;} */
+    </style>
+</head>
+<body>
+    <div class="swiperbox">
+        <h2>轮播 demo</h2>
+        <div class="swiper1">
+            <a class="arrow-left swiper-button-prev" href="#">prev </a> 
+            <a class="arrow-right swiper-button-next" href="#"> next</a>
+            <div class="swiper-container container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> 
+                        <img class="vm g10" src="../src/images/mbj1.jpg"> 
+                        <p class="name">demo1</p>
+                    </div>
+                    <div class="swiper-slide"> 
+                        <img class="vm g10" src="../src/images/mbj2.jpg"> 
+                        <p class="name">demo2</p>
+                    </div>
+                    <div class="swiper-slide"> 
+                        <img class="vm g10" src="../src/images/mbj3.jpg"> 
+                        <p class="name">demo3</p>
+                    </div>
+                    <div class="swiper-slide"> 
+                        <img class="vm g10" src="../src/images/mbj4.jpg"> 
+                        <p class="name">demo4</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="vm g10" src="../src/images/mbj5.jpg"> 
+                        <p class="name">demo5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination pag1"></div>
+        </div>
+        <div class="swiper2">
+            <div class="swiper-container container2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide on"> <img class="vm g10" src="../src/images/mbj1.jpg"> </div>
+                    <div class="swiper-slide"> <img class="vm g10" src="../src/images/mbj2.jpg"> </div>
+                    <div class="swiper-slide"> <img class="vm g10" src="../src/images/mbj3.jpg"> </div>
+                    <div class="swiper-slide"> <img class="vm g10" src="../src/images/mbj4.jpg"> </div>
+                    <div class="swiper-slide"> <img class="vm g10" src="../src/images/mbj5.jpg"> </div>
+                </div>
+            </div>
+            <div class="pagination pag2 hide"></div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+
+            var newWidth = document.body.clientWidth*0.6+'px';
+            $('.swiperbox').css('width',newWidth);
+
+            var swiper1 = new Swiper('.container1',{
+                pagination: '.pag1',
+                loop:true,
+                grabCursor: true,
+                paginationClickable: true,
+                calculateHeight : false,
+                slidesPerView : 1,
+                autoPlay:0,
+                onSlideChangeEnd:function(swiper){
+                    swiper2.swipeTo(swiper1.activeIndex-1, 200, false);
+                    var currentslide = $('.swiper2').find('.swiper-slide').eq(swiper1.activeIndex-1);
+                    var otherslide = currentslide.siblings();
+                    otherslide.removeClass('on');
+                    currentslide.addClass('on');
+                }
+            })
+
+            var swiper2 = new Swiper('.container2',{
+                pagination: '.pag2',
+                loop:false,
+                grabCursor: true,
+                paginationClickable: true,
+                slidesPerView: 4,
+                freeMode : false,
+                calculateHeight : true,
+                paginationAsRange : true,
+                onSlideChangeEnd:function(swiper){
+                    // console.log(swiper2.activeLoopIndex)
+                    // swiper1.swipeTo(swiper2.activeLoopIndex, 200, false);
+                },
+                onSlideTouch:function() {
+                    swiper1.swipeTo(swiper2.clickedSlideLoopIndex, 200, false);
+                }
+            })
+
+            $('.swiper-button-prev').on('click', function(e){
+                e.preventDefault();
+                swiper1.swipePrev();
+            })
+            $('.swiper-button-next').on('click', function(e){
+                e.preventDefault();
+                swiper1.swipeNext();
+            });
+
+            $('.swiper2').find('.swiper-slide').on('click',function(){
+                var o = $(this);
+                var os = o.siblings();
+                os.removeClass('on');
+                o.addClass('on');
+            });
+
+ 
+
+
+        })
+    </script>
+          
+</body>
+</html>

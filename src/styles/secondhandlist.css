@@ -1,0 +1,135 @@
+.breadbox {height: 40px;}
+.breadbox .bread-position {line-height: 40px;}
+.breadbox .bread-position a{font-size: 14px;color: #8e8e93;}
+.breadbox .bread-position .icon-right3 {position: relative;top: 1px;margin:0 1px;}
+.breadbox .list-location {text-align: right;margin-top: 6px;}
+.breadbox .list-location .p1 {color:#fff;font-size: 14px;line-height: 30px;margin-right: 10px;}
+
+.selectbox {border-radius: 1px;border: solid 1px #eee;margin-top: 20px;}
+.selectbox .selectmain {font-size: 16px;margin-top: 3px;}
+.selectbox .selectlist {padding:8px 35px;border-bottom: solid 1px #f0f0f0;}
+.selectbox .maincon {margin-left: 60px;}
+.selectbox .mainlist {color: #007dbf;transition:all ease 0.3s;height: 30px;line-height: 30px;padding:0 12px;display: inline-block;
+font-size: 14px;}
+.selectbox .mainlist:hover {background-color: #ff8100;border-radius: 4px;color:#fff;}
+.selectbox .mainliston {background-color: #ff8100;border-radius: 4px;color:#fff;}
+.selectbox .showall {color: #ff7700;font-size: 14px;}
+
+.selectbox .showall {background: url('../images/secondhandlist/four.png') no-repeat;width: 96px;height: 36px;display: inline-block;
+line-height: 36px;}
+.selectbox .list-down {position: relative;top: -1px;}
+.selectbox .zone .maincon {height: 30px;overflow: hidden;transition:all ease 0.3s;}
+.selectbox .query {background: url('../images/secondhandlist/query.png') no-repeat;width: 60px;height: 34px;line-height: 34px;
+    display: inline-block;margin-left: 10px;}
+.selectbox .query .list-query {position: relative;top: 1px;}
+.selectbox .price-input input {width: 56px;height: 26px;line-height: 26px;text-align: center;font-size: 14px;border:1px solid #9bcefb;}
+.selectbox .price-input em{font-size: 14px;margin-left: 2px;}
+
+
+.changesize {width: 72px;height: 22px;background-color: #f6f6f6;border-radius: 100px;border: solid 1px #dcdcdc;
+display: inline-block;line-height: 22px;color: #8e8e93;font-size: 14px;}
+.sizecon span{display: inline-block;}
+.sizeon {width: 41px;height: 22px;background:#f76b1c;border-radius: 100px;color:#fff;text-align: center;}
+.showmore {background: url('../images/secondhandlist/showmore.png') no-repeat center center;height: 45px;}
+.morebtn {background: url('../images/secondhandlist/mbtn.png') no-repeat center center;width: 98px;height: 34px;line-height: 34px;
+text-align: center;cursor: pointer;font-size: 14px;color: #3b9df8;margin:0 auto;position: relative;top: -2px;}
+.list-moredown {position: relative;top: -2px;}
+
+.choosen {border-radius: 1px;border: solid 1px #eee;height: 40px;line-height: 40px;}
+.choosen .choosencon {padding:0 14px;}
+.choosen .p1 {font-size: 14px;color:#333;}
+.choosenlist {color: #ff7700;font-size: 14px;height: 26px;line-height: 26px;color: #ff7700;border-radius: 3px;
+    border: solid 1px #ff7700;padding:0 6px;position: relative;margin-top: 6px;margin-right: 10px;}
+.choosen .optionlist {margin-right: 20px;}
+.choosen .optionlist .s2 {font-size: 14px;color: #a3a3a3;}
+.choosen .optionlist .list-clean {position: relative;top: 3px;}
+.choosen .optionlist .list-save {position: relative;top: 3px;}
+
+.main-pro {width: 900px;}
+.housechoose {margin-top: 10px;}
+.housechoose .total {font-size: 14px;}
+.housechoose .total {background: url('../images/secondhandlist/total.png') no-repeat center center;width: 156px;height: 40px;
+    line-height: 40px;color:#fff;font-size: 14px;text-align: center;}
+.housechoose .otherchoose {height: 38px;background-color: #fafdff;border-radius: 1px;border: solid 1px #f3f3f3;width: 743px;
+border-left:none;line-height: 38px;}
+.housechoose .otherchoose .p1 {font-size: 14px;margin-left: 15px;}
+.housechoose .changesize {margin-top: 7px;}
+.housechoose .haspic {font-size: 14px;margin-left: 15px;}
+.housechoose .haspic input {margin-top: 2px;position: relative;top: 2px;}
+
+.houseoption {margin-top: 1px;margin-right: 15px;}
+.houseoption .optionbtn {text-align: center;font-size: 14px;cursor: pointer;margin-left: 10px;}
+.houseoption .two {background: url('../images/secondhandlist/two.png') no-repeat center center;width: 68px;height: 36px;
+    line-height: 36px;}
+.houseoption .four {background: url('../images/secondhandlist/four.png') no-repeat center center;width: 96px;height: 36px;
+    line-height: 36px;}
+.houseoption .s3 {margin-left: 15px;}
+.houseoption .icon-group {margin-top: 13px;margin-right: 15px;}
+.houseoption .icon-group .list-chooseup {margin-bottom: 2px;}
+.houseoption .bigpic .s3 {margin-left: 10px;}
+.houseoption .bigpic .icon-group {margin-right: 10px;}
+
+.banner2 {width: 900px;margin-top: 20px;}
+
+.houselist {border-bottom: 1px solid #e7e7e7;position: relative;padding: 20px 0 20px 0;transition:all ease 0.3s;
+transform:scale(1,1);}
+.houselist:hover {box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.11);transform:scale(1.01,1.01);padding-left: 10px;}
+.houselist .chart {width: 230px;margin-right: 16px;position: relative;}
+.houselist .chart .recommend {width: 65px;height: 70px;position: absolute;top: -6px;left: -6px;}
+.houselist .detail {margin-left: 20px;}
+.houselist .namebox {margin:10px 0 7px 0;}
+.houselist .namebox .list-name {margin-top: 5px;}
+.houselist .namebox a{color: #007dbf;font-size: 18px;}
+.houselist .locationbox {margin-bottom: 5px;}
+.houselist .locationbox .p1 {color: #ff7700;font-size: 14px;}
+.houselist .infobox {margin-bottom: 5px;}
+.houselist .infobox .p1 {font-size: 14px;}
+.houselist .infobox .list-size {margin-top: 3px;}
+.houselist .timebox .list-time {margin-top: 3px;}
+.houselist .timebox .p1 {color:#666;font-size: 14px;}
+.houselist .tagbox .s1 {color: #035a94;height: 20px;line-height: 20px;background: #d5f0ff;color: #035a94;padding:0 6px;
+margin-right: 5px;display: inline-block;}
+.houselist .notice {font-size: 12px;color:#ccc;margin-top: 10px;}
+
+.allright {padding-right: 10px;}
+.allright .p1 {color: #ff7700;font-size: 24px;text-align: right;margin-top: 10px;}
+.allright .p2 {font-size: 20px;color:#666;text-align: right;}
+.allright .compare {color:#fff;font-size: 14px;line-height: 26px;margin-top: 2px;}
+.allright .list-star {position: relative;top: 4px;}
+.allright .compbtn {background: url('../images/secondhandlist/listicons.png') no-repeat -121px -60px;width: 117px;height: 37px;
+position: absolute;top: 140px;right: -8px;}
+.manage-shape {background: url('../images/secondhandlist/shape.jpg') no-repeat;width: 25px;height: 11px;
+margin:10px 0 0 50px;}
+.manage {width: 780px;height: 25px;line-height: 25px;margin-left: 5px;background: #f0f7fd;}
+.manage .manage-head {width: 20px;height: 20px;border-radius:50%;margin-top: 2px;margin-left: 5px;}
+.manage p{line-height: 25px;}
+.manage .p1 {font-size: 14px;color:#555;margin-left: 5px;}
+.manage .p2 {font-size: 14px;color:#888;margin-left: 5px;}
+.manage .managebtn {background: url('../images/secondhandlist/listicons.png') no-repeat -60px -20px;width: 64px;height: 20px;
+line-height: 20px;text-align: center;color:#fff;font-size: 12px;margin: 2px 5px 0 0;}
+
+.map-box {width: 284px;text-align: center;}
+.map-box .findhouse {background: url('../images/secondhandlist/findhouse.png') no-repeat;width: 110px;height: 30px;line-height: 30px;
+text-align: center;margin:10px auto 0;font-size: 16px;color:#fff;}
+
+.hothouse {margin-top: 35px;width: 284px;}
+.hothouse .hottitle {background: url('../images/secondhandlist/hothouse.png') no-repeat;width: 284px;height: 44px;
+font-size: 18px;line-height: 44px;color:#fff;}
+.hothouse .hottitle .list-hot {position: relative;top: 5px;margin-right: 10px;}
+.hotbody {border: solid 1px #e7e7e7;border-top: none;padding-top: 5px;width: 280px;margin:-2px auto;}
+.hotbody .hotcon {width:270px;margin:0 auto;}
+.hotlist {background: #fff;width: 270px;margin-bottom: 10px;}
+.hotlist .chart {width: 270px;position: relative;box-shadow: 0px 2px 4px 0px 
+    rgba(249, 249, 249, 0.84);}
+.hotlist .chart .proname {position: absolute;height: 30px;background: rgba(0,0,0,0.6);bottom: 0;left: 0;
+color:#fff;}
+.hotlist .icon-location2 {position: relative;top: 3px;}
+.hotlist .chart .proname .position {font-size: 16px;}
+.hotlist .chart .proname .nameinner {font-size: 14px;}
+.hotlist .hotdetail {padding:12px;}
+.hotlist .hotdetail .p1 {color:#666;font-size: 14px;}
+.hotlist .hotdetail .p2 {margin-top: 3px;}
+.hotlist .price em{color: #f97a2d;}
+.hotlist .price .em1 {font-size: 20px;line-height: 20px;}
+.hotlist .price .em2 {font-size: 14px;}
+.hotlist .money {text-align: right;font-size: 14px;color:#666;}

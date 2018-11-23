@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../src/scripts/jquery-1.8.3.min.js"></script>
+    <title>无缝滚动</title>
+    <style>
+        .myscroll { width: 300px; height: 260px; margin: 50px auto 0; border: 1px solid #ccc; line-height: 26px; font-size: 12px; overflow: hidden;}
+        .myscroll li { height: 26px; margin-left: 25px;}
+        .myscroll a { color: #333; text-decoration: none;}
+        .myscroll a:hover { color: #ED5565; text-decoration: underline;}
+
+
+        .scrolltest {height: 300px;overflow: hidden;border:1px solid #000;width: 200px;margin:30px auto 0;
+        text-align: center;width: 250px;display: block;}
+    </style>
+</head>
+<body>
+    <div class="scroll">
+        <div class="myscroll">
+            <ul>
+                <li><a href="">用FlexSlider制作支付宝2013版幻灯片</a></li>
+                <li><a href="">扁平化UI/Flat UI Kit(PSD)</a></li>
+                <li><a href="">童趣卡通圣诞老人矢量素材(EPS)</a></li>
+                <li><a href="">63个线性图标素材(PSD)</a></li>
+                <li><a href="">15个音乐类图标素材(AI)</a></li>
+                <li><a href="">jQuery侧边导航插件SidebarJS</a></li>
+                <li><a href="">jQuery计时器插件TimeCircles</a></li>
+                <li><a href="">jQuery仿Google Play幻灯片效果插件plusview</a></li>
+                <li><a href="">100个圣诞节矢量图标(PSD/SVG)</a></li>
+                <li><a href="">用FlexSlider制作《枪神纪》幻灯片效果</a></li>
+                <li><a href="">用FlexSlider制作支付宝2013版幻灯片</a></li>
+                <li><a href="">扁平化UI/Flat UI Kit(PSD)</a></li>
+                <li><a href="">童趣卡通圣诞老人矢量素材(EPS)</a></li>
+                <li><a href="">63个线性图标素材(PSD)</a></li>
+                <li><a href="">15个音乐类图标素材(AI)</a></li>
+                <li><a href="">jQuery侧边导航插件SidebarJS</a></li>
+                <li><a href="">jQuery计时器插件TimeCircles</a></li>
+                <li><a href="">jQuery仿Google Play幻灯片效果插件plusview</a></li>
+                <li><a href="">100个圣诞节矢量图标(PSD/SVG)</a></li>
+                <li><a href="">用FlexSlider制作《枪神纪》幻灯片效果</a></li>
+            </ul>
+        </div>
+
+        <marquee onmouseover=this.stop() onmouseout=this.start() behavior="scroll" direction="down" 
+        scrollamount="3" vspace="50" hspace="50" class="scrolltest">
+            <div class="scrollinner sinner1">
+                <p class="p1">第1行</p>
+                <p class="p1">第2行</p>
+                <p class="p1">第3行</p>
+                <p class="p1">第4行</p>
+                <p class="p1">第5行</p>
+                <p class="p1">第6行</p>
+                <p class="p1">第7行</p>
+                <p class="p1">第8行</p>
+                <p class="p1">第9行</p>
+                <p class="p1">第10行</p>
+                <p class="p1">第11行</p>
+                <p class="p1">第12行</p>
+                <p class="p1">第13行</p>
+                <p class="p1">第14行</p>
+                <p class="p1">第15行</p>
+            </div>
+            <div class="scrollinner sinner2">
+                <p class="p1">第1行</p>
+                <p class="p1">第2行</p>
+                <p class="p1">第3行</p>
+                <p class="p1">第4行</p>
+                <p class="p1">第5行</p>
+                <p class="p1">第6行</p>
+                <p class="p1">第7行</p>
+                <p class="p1">第8行</p>
+                <p class="p1">第9行</p>
+                <p class="p1">第10行</p>
+                <p class="p1">第11行</p>
+                <p class="p1">第12行</p>
+                <p class="p1">第13行</p>
+                <p class="p1">第14行</p>
+                <p class="p1">第15行</p>
+            </div>
+        </marquee>
+    </div>
+
+    <script>
+        $(function(){
+            // JavaScript Document
+            // (function($){
+                $.fn.myScroll = function(options){
+                //默认配置
+                    var defaults = {
+                        speed:40,  //滚动速度,值越大速度越慢
+                        rowHeight:24 //每行的高度
+                    };
+                    
+                    var opts = $.extend({}, defaults, options),intId = [];
+                    
+                    function marquee(obj, step){
+                    
+                        obj.find("ul").animate({
+                            marginTop: '-=1'
+                        },0,function(){
+                                var s = Math.abs(parseInt($(this).css("margin-top")));
+                                if(s >= step){
+                                    $(this).find("li").slice(0, 1).appendTo($(this));
+                                    $(this).css("margin-top", 0);
+                                }
+                            });
+                    }
+                        
+                    this.each(function(i){
+                        var sh = opts["rowHeight"],speed = opts["speed"],_this = $(this);
+                        intId[i] = setInterval(function(){
+                            if(_this.find("ul").height()<=_this.height()){
+                                clearInterval(intId[i]);
+                            }else{
+                                marquee(_this, sh);
+                            }
+                        }, speed);
+
+                        _this.hover(function(){
+                            clearInterval(intId[i]);
+                        },function(){
+                            intId[i] = setInterval(function(){
+                                if(_this.find("ul").height()<=_this.height()){
+                                    clearInterval(intId[i]);
+                                }else{
+                                    marquee(_this, sh);
+                                }
+                            }, speed);
+                        });
+                    
+                    });
+
+                }
+
+            // })(jQuery);
+
+            $('.myscroll').myScroll({
+                speed: 40, //数值越大，速度越慢
+                rowHeight: 26 //li的高度
+            });
+        });
+    </script>
+</body>
+</html>

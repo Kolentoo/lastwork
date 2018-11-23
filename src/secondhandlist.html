@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/core.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/secondhandlist.css">
+    <script src="./scripts/jquery-1.8.3.min.js"></script>
+    <script src="./scripts/common.js"></script>
+    <script src="./scripts/page.js"></script>
+    <script src="./scripts/secondhandlist.js"></script>
+    <title>二手房列表页</title>
+    <base target="_blank" />
+</head>
+<body>
+    <div class="johome johomefont" id="johome">
+        <div class="top-box">
+        </div>
+
+        <div class="allsize">
+            <div class="breadbox clearfix">
+                <div class="bread-position fl">
+                    <a href="">首页</a>
+                    <i class="icon-right3"></i>
+                    <a href="">别墅</a>
+                </div>
+                <div class="list-location pointer fr">
+                    <p class="p1">地图模式</p>
+                </div>
+            </div>
+            <img class="vm g10 banner1" src="./images/secondhandlist/banner1.jpg" alt="">
+
+            <div class="selectbox">
+                <ul class="selectcon">
+                    <li class="selectlist clearfix zone">
+                        <div class="selectmain fl">区域：</div>
+                        <div class="maincon">
+                            <a class="mainlist pointer mainliston">不限</a>
+                            <a class="mainlist pointer">温东</a>
+                            <a class="mainlist pointer">温西</a>
+                            <a class="mainlist pointer">列治文</a>
+                            <a class="mainlist pointer">西温</a>
+                            <a class="mainlist pointer">东本拿比</a>
+                            <a class="mainlist pointer">南本拿比</a>
+                            <a class="mainlist pointer">北本拿比</a>
+                            <a class="mainlist pointer">素里</a>
+                            <a class="mainlist pointer">北素里</a>
+                            <a class="mainlist pointer">白石</a>
+                            <a class="mainlist pointer">南素里</a>
+                            <a class="mainlist pointer">温东</a>
+                            <a class="mainlist pointer">温东</a>
+                            <a class="mainlist pointer">温东</a>
+                            <a class="mainlist pointer">北本拿比</a>
+                            <a class="mainlist pointer">素里</a>
+                            <a class="mainlist pointer">北素里</a>
+                            <a class="mainlist pointer">白石</a>
+                            <a class="mainlist pointer">南素里</a>
+                            <a class="mainlist pointer">温东</a>
+                            <a class="mainlist pointer">温东</a>
+                            <a class="mainlist pointer">温东</a>
+                            <span class="showall tc pointer">
+                                <em>展开全部</em>
+                                <i class="list-down"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="selectlist clearfix price">
+                        <div class="selectmain fl">总价：</div>
+                        <div class="maincon">
+                            <a class="mainlist pointer mainliston">不限</a>
+                            <a class="mainlist pointer">50万以下</a>
+                            <a class="mainlist pointer">50-100万</a>
+                            <a class="mainlist pointer">100-150万</a>
+                            <a class="mainlist pointer">150-200万</a>
+                            <a class="mainlist pointer">200-300万</a>
+                            <a class="mainlist pointer">300-500万</a>
+                            <a class="mainlist pointer">500万以上</a>
+                            <span class="inputbox price-input">
+                                <input type="text" class="start"> - 
+                                <input type="text" class="end">
+                                <em>万</em>
+                            </span>
+                            <span class="query tc pointer">
+                                <i class="list-query"></i>
+                                <em>查询</em>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="selectlist clearfix roomtype">
+                        <div class="selectmain fl">房型：</div>
+                        <div class="maincon">
+                            <a class="mainlist pointer mainliston">不限</a>
+                            <a class="mainlist pointer">3卧室以下</a>
+                            <a class="mainlist pointer">4卧室以下</a>
+                            <a class="mainlist pointer">4卧室</a>
+                            <a class="mainlist pointer">5卧室</a>
+                            <a class="mainlist pointer">6卧室</a>
+                            <a class="mainlist pointer">7卧室</a>
+                            <a class="mainlist pointer">7卧室以上</a>
+                            <span class="inputbox price-input">
+                                <input type="text" class="start"> - 
+                                <input type="text" class="end">
+                                <em>卧</em>
+                            </span>
+                            <span class="query tc pointer">
+                                <i class="list-query"></i>
+                                <em>查询</em>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="selectlist clearfix size">
+                        <div class="selectmain fl">面积：</div>
+                        <div class="maincon">
+                            <a class="mainlist pointer mainliston">不限</a>
+                            <a class="mainlist pointer">150ft²以下</a>
+                            <a class="mainlist pointer">150-200ft²</a>
+                            <a class="mainlist pointer">200-250ft²</a>
+                            <a class="mainlist pointer">250-300ft²</a>
+                            <a class="mainlist pointer">300-500ft²</a>
+                            <a class="mainlist pointer">500ft²以上</a>
+                            <span class="changesize pointer">
+                                <span class="sizecon">
+                                    <span class="yc sizeon">英尺</span>
+                                    <span class="mi">米</span>
+                                </span>
+                            </span>
+                            
+                        </div>
+                    </li>
+                    <li class="selectlist clearfix card">
+                        <div class="selectmain fl">挂牌：</div>
+                        <div class="maincon">
+                            <a class="mainlist pointer mainliston">不限</a>
+                            <a class="mainlist pointer">最新房源</a>
+                            <a class="mainlist pointer">1个月内</a>
+                            <a class="mainlist pointer">3个月内</a>
+                        </div>
+                    </li>
+                    <li class="selectlist clearfix card">
+                        <div class="selectmain fl">年份：</div>
+                        <div class="maincon">
+                            <a class="mainlist pointer mainliston">不限</a>
+                            <a class="mainlist pointer">1970年以前</a>
+                            <a class="mainlist pointer">1971-1980年</a>
+                            <a class="mainlist pointer">1981-1990年</a>
+                            <a class="mainlist pointer">1991-2000年</a>
+                            <a class="mainlist pointer">2001-2005年</a>
+                            <a class="mainlist pointer">2006-2010年</a>
+                            <a class="mainlist pointer">2010年以后</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="selectmore">
+                <div class="showmore">
+                    <div class="morebtn">
+                        更多
+                        <i class="list-moredown"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="choosen allsize">
+            <div class="choosencon clearfix">
+                <p class="p1 fl">已选条件：</p>
+                <ul class="choosenbox clearfix fl">
+                    <li class="choosenlist fl">
+                        <span class="s1">300-500万</span>
+                        <i class="list-close pointer"></i>
+                    </li>
+                </ul>
+                <ul class="option fl clearfix">
+                    <li class="optionlist pointer fl">
+                        <i class="list-clean"></i>
+                        <span class="s2">清空所有</span>
+                    </li>
+                    <li class="optionlist pointer fl saveoption">
+                        <i class="list-save"></i>
+                        <span class="s2">保存筛选条件</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="housechoose clearfix allsize">
+            <div class="main-pro fl">
+                <div class="main-head clearfix">
+                    <p class="total fl">共找到 141 套房源</p>
+                    <div class="otherchoose fl clearfix">
+                        <p class="p1 fl">单位转换：</p>
+                        <span class="changesize pointer fl">
+                            <span class="sizecon">
+                                <span class="yc sizeon">英尺</span>
+                                <span class="mi">米</span>
+                            </span>
+                        </span>
+                        <div class="haspic fl">
+                            <span class="s2">有图</span>
+                            <input type="checkbox">
+                        </div>
+                        <ul class="houseoption fr clearfix">
+                            <li class="optionbtn two clearfix fl">
+                                <span class="s3 fl">时间</span>
+                                <span class="icon-group fr">
+                                    <i class="list-chooseup"></i>
+                                    <i class="list-choosedown"></i>
+                                </span>
+                            </li>
+                            <li class="optionbtn two clearfix fl">
+                                <span class="s3 fl">总价</span>
+                                <span class="icon-group fr">
+                                    <i class="list-chooseup"></i>
+                                    <i class="list-choosedown"></i>
+                                </span>
+                            </li>
+                            <li class="optionbtn two clearfix fl">
+                                <span class="s3 fl">面积</span>
+                                <span class="icon-group fr">
+                                    <i class="list-chooseup"></i>
+                                    <i class="list-choosedown"></i>
+                                </span>
+                            </li>
+                            <li class="optionbtn two clearfix fl">
+                                <span class="s3 fl">房龄</span>
+                                <span class="icon-group fr">
+                                    <i class="list-chooseup"></i>
+                                    <i class="list-choosedown"></i>
+                                </span>
+                            </li>
+                            <li class="optionbtn four clearfix fl">
+                                <span class="s3 fl">较多人看</span>
+                                <span class="icon-group fr">
+                                    <i class="list-chooseup"></i>
+                                    <i class="list-choosedown"></i>
+                                </span>
+                            </li>
+                            <li class="optionbtn two clearfix fl bigpic">
+                                <span class="s3 fl">大图</span>
+                                <span class="icon-group fr">
+                                    <i class="list-changepic"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="vm banner2" src="./images/secondhandlist/banner2.jpg" alt="">
+
+                <div class="housebox">
+                    <ul class="housecon">
+                        <li class="houselist">
+                            <div class="listcon clearfix">
+                                <div class="chart fl">
+                                    <a class="block" href=""><img class="pic vm g10" src="./images/secondhandlist/pro.png" alt=""></a>
+                                    <img class="vm recommend" src="./images/secondhandlist/recommend.png" alt="">
+                                </div>
+                                <div class="detail fl">
+                                    <div class="namebox clearfix">
+                                        <i class="list-name block fl"></i>
+                                        <a href="">6卧8卫2厨，别墅</a>
+                                    </div>
+                                    <div class="locationbox clearfix">
+                                        <i class="list-location fl block"></i>
+                                        <p class="p1 fl">39 E 33RD AVENUECourtesy of Macdonald Realty</p>
+                                    </div>
+                                    <div class="infobox clearfix">
+                                        <i class="list-size fl block"></i>
+                                        <p class="p1 fl">占地11342平方英尺，房屋面积2334平方英尺  1998年建造</p>
+                                    </div>
+                                    <div class="timebox clearfix">
+                                        <i class="list-time fl block"></i>
+                                        <p class="p1 fl">103人关注/15天前发布</p>
+                                        <div class="tagbox fl">
+                                            <span class="s1">地铁房</span>
+                                            <span class="s1">优质学区房</span>
+                                        </div>
+                                    </div>
+                                    <p class="notice">RE/MAX  Treeland Realty</p>
+                                </div>
+                                <div class="allright fr clearfix">
+                                    <p class="p1"><em class="customfont">638.90</em> 万加币</p>
+                                    <p class="p2">约 ¥736.17 万</p>
+                                    <div class="compare tc pointer fr">
+                                        <i class="list-star"></i>
+                                        <em>加入收藏</em>
+                                    </div>
+                                    <div class="compbtn pointer"></div>
+                                </div>
+                            </div>
+                            <div class="manage-shape"></div>
+                            <div class="manage clearfix">
+                                <img class="manage-head vm fl" src="./images/secondhandlist/manager.jpg" alt="">
+                                <p class="p1 fl">张旭:</p>
+                                <p class="p2 fl">很少有令人惊叹的联排别墅在Capilano Ridge追捧。明亮的朝西阳台和庭院背靠着风景如画的森林</p>
+                                <a href="" class="managebtn fr">经纪评价</a>
+                            </div>
+                        </li>
+                        <li class="houselist">
+                            <div class="listcon clearfix">
+                                <div class="chart fl">
+                                    <a class="block" href=""><img class="pic vm g10" src="./images/secondhandlist/pro.png" alt=""></a>
+                                    <img class="vm recommend" src="./images/secondhandlist/recommend.png" alt="">
+                                </div>
+                                <div class="detail fl">
+                                    <div class="namebox clearfix">
+                                        <i class="list-name block fl"></i>
+                                        <a href="">6卧8卫2厨，别墅</a>
+                                    </div>
+                                    <div class="locationbox clearfix">
+                                        <i class="list-location fl block"></i>
+                                        <p class="p1 fl">39 E 33RD AVENUECourtesy of Macdonald Realty</p>
+                                    </div>
+                                    <div class="infobox clearfix">
+                                        <i class="list-size fl block"></i>
+                                        <p class="p1 fl">占地11342平方英尺，房屋面积2334平方英尺  1998年建造</p>
+                                    </div>
+                                    <div class="timebox clearfix">
+                                        <i class="list-time fl block"></i>
+                                        <p class="p1 fl">103人关注/15天前发布</p>
+                                        <div class="tagbox fl">
+                                            <span class="s1">地铁房</span>
+                                            <span class="s1">优质学区房</span>
+                                        </div>
+                                    </div>
+                                    <p class="notice">RE/MAX  Treeland Realty</p>
+                                </div>
+                                <div class="allright fr clearfix">
+                                    <p class="p1"><em class="customfont">638.90</em> 万加币</p>
+                                    <p class="p2">约 ¥736.17 万</p>
+                                    <div class="compare tc pointer fr">
+                                        <i class="list-star"></i>
+                                        <em>加入收藏</em>
+                                    </div>
+                                    <div class="compbtn pointer"></div>
+                                </div>
+                            </div>
+                            <div class="manage-shape"></div>
+                            <div class="manage clearfix">
+                                <img class="manage-head vm fl" src="./images/secondhandlist/manager.jpg" alt="">
+                                <p class="p1 fl">张旭:</p>
+                                <p class="p2 fl">很少有令人惊叹的联排别墅在Capilano Ridge追捧。明亮的朝西阳台和庭院背靠着风景如画的森林</p>
+                                <a href="" class="managebtn fr">经纪评价</a>
+                            </div>
+                        </li>
+                        <li class="houselist">
+                            <div class="listcon clearfix">
+                                <div class="chart fl">
+                                    <a class="block" href=""><img class="pic vm g10" src="./images/secondhandlist/pro.png" alt=""></a>
+                                    <img class="vm recommend" src="./images/secondhandlist/recommend.png" alt="">
+                                </div>
+                                <div class="detail fl">
+                                    <div class="namebox clearfix">
+                                        <i class="list-name block fl"></i>
+                                        <a href="">6卧8卫2厨，别墅</a>
+                                    </div>
+                                    <div class="locationbox clearfix">
+                                        <i class="list-location fl block"></i>
+                                        <p class="p1 fl">39 E 33RD AVENUECourtesy of Macdonald Realty</p>
+                                    </div>
+                                    <div class="infobox clearfix">
+                                        <i class="list-size fl block"></i>
+                                        <p class="p1 fl">占地11342平方英尺，房屋面积2334平方英尺  1998年建造</p>
+                                    </div>
+                                    <div class="timebox clearfix">
+                                        <i class="list-time fl block"></i>
+                                        <p class="p1 fl">103人关注/15天前发布</p>
+                                        <div class="tagbox fl">
+                                            <span class="s1">地铁房</span>
+                                            <span class="s1">优质学区房</span>
+                                        </div>
+                                    </div>
+                                    <p class="notice">RE/MAX  Treeland Realty</p>
+                                </div>
+                                <div class="allright fr clearfix">
+                                    <p class="p1"><em class="customfont">638.90</em> 万加币</p>
+                                    <p class="p2">约 ¥736.17 万</p>
+                                    <div class="compare tc pointer fr">
+                                        <i class="list-star"></i>
+                                        <em>加入收藏</em>
+                                    </div>
+                                    <div class="compbtn pointer"></div>
+                                </div>
+                            </div>
+                            <div class="manage-shape"></div>
+                            <div class="manage clearfix">
+                                <img class="manage-head vm fl" src="./images/secondhandlist/manager.jpg" alt="">
+                                <p class="p1 fl">张旭:</p>
+                                <p class="p2 fl">很少有令人惊叹的联排别墅在Capilano Ridge追捧。明亮的朝西阳台和庭院背靠着风景如画的森林</p>
+                                <a href="" class="managebtn fr">经纪评价</a>
+                            </div>
+                        </li>
+                        <li class="houselist">
+                            <div class="listcon clearfix">
+                                <div class="chart fl">
+                                    <a class="block" href=""><img class="pic vm g10" src="./images/secondhandlist/pro.png" alt=""></a>
+                                    <img class="vm recommend" src="./images/secondhandlist/recommend.png" alt="">
+                                </div>
+                                <div class="detail fl">
+                                    <div class="namebox clearfix">
+                                        <i class="list-name block fl"></i>
+                                        <a href="">6卧8卫2厨，别墅</a>
+                                    </div>
+                                    <div class="locationbox clearfix">
+                                        <i class="list-location fl block"></i>
+                                        <p class="p1 fl">39 E 33RD AVENUECourtesy of Macdonald Realty</p>
+                                    </div>
+                                    <div class="infobox clearfix">
+                                        <i class="list-size fl block"></i>
+                                        <p class="p1 fl">占地11342平方英尺，房屋面积2334平方英尺  1998年建造</p>
+                                    </div>
+                                    <div class="timebox clearfix">
+                                        <i class="list-time fl block"></i>
+                                        <p class="p1 fl">103人关注/15天前发布</p>
+                                        <div class="tagbox fl">
+                                            <span class="s1">地铁房</span>
+                                            <span class="s1">优质学区房</span>
+                                        </div>
+                                    </div>
+                                    <p class="notice">RE/MAX  Treeland Realty</p>
+                                </div>
+                                <div class="allright fr clearfix">
+                                    <p class="p1"><em class="customfont">638.90</em> 万加币</p>
+                                    <p class="p2">约 ¥736.17 万</p>
+                                    <div class="compare tc pointer fr">
+                                        <i class="list-star"></i>
+                                        <em>加入收藏</em>
+                                    </div>
+                                    <div class="compbtn pointer"></div>
+                                </div>
+                            </div>
+                            <div class="manage-shape"></div>
+                            <div class="manage clearfix">
+                                <img class="manage-head vm fl" src="./images/secondhandlist/manager.jpg" alt="">
+                                <p class="p1 fl">张旭:</p>
+                                <p class="p2 fl">很少有令人惊叹的联排别墅在Capilano Ridge追捧。明亮的朝西阳台和庭院背靠着风景如画的森林</p>
+                                <a href="" class="managebtn fr">经纪评价</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tc"><div id="pager" class="pager clearfix"></div></div>
+
+                <div id="wraper" class="pagerHtmlWrap"></div>
+            </div>
+            <div class="second-pro fr">
+                <div class="map-box">
+                    <img class="mappic vm" src="./images/secondhandlist/map.jpg" alt="">
+                    <a href="" class="findhouse block">试试地图找房</a>
+                </div>
+                <div class="hothouse">
+                    <div class="hottitle tc">
+                        <i class="list-hot"></i>
+                        温哥华热门房源
+                    </div>
+                    <div class="hotbody">
+                        <ul class="hotcon">
+                            <li class="hotlist">
+                                <a href="" class="block">
+                                    <div class="chart">
+                                        <img class="propic vm g10" src="./images/secondhandlist/pro.png" alt="">
+                                        <div class="proname tc">
+                                            <i class="icon-location2"></i>
+                                            <span class="position">北温</span>
+                                            <span class="nameinner">362 Lawrence Ave W362 Lawrence Ave W</span>
+                                        </div>
+                                    </div>
+                                    <div class="hotdetail clearfix">
+                                        <div class="hotinfo fl">
+                                            <p class="p1">别墅，3卧</p>
+                                            <p class="p1 p2">1980平方英尺</p>
+                                        </div>
+                                        <div class="price fr">
+                                            <div class="embox">
+                                                <em class="em1 customfont">1298.00</em>
+                                                <em class="em2">万</em>
+                                            </div>
+                                            <div class="money">加币</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="hotlist">
+                                    <a href="" class="block">
+                                        <div class="chart">
+                                            <img class="propic vm g10" src="./images/secondhandlist/pro.png" alt="">
+                                            <div class="proname tc">
+                                                <i class="icon-location2"></i>
+                                                <span class="position">北温</span>
+                                                <span class="nameinner">362 Lawrence Ave W362 Lawrence Ave W</span>
+                                            </div>
+                                        </div>
+                                        <div class="hotdetail clearfix">
+                                            <div class="hotinfo fl">
+                                                <p class="p1">别墅，3卧</p>
+                                                <p class="p1 p2">1980平方英尺</p>
+                                            </div>
+                                            <div class="price fr">
+                                                <div class="embox">
+                                                    <em class="em1 customfont">1298.00</em>
+                                                    <em class="em2">万</em>
+                                                </div>
+                                                <div class="money">加币</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                            </li>
+                            <li class="hotlist">
+                                <a href="" class="block">
+                                    <div class="chart">
+                                        <img class="propic vm g10" src="./images/secondhandlist/pro.png" alt="">
+                                        <div class="proname tc">
+                                            <i class="icon-location2"></i>
+                                            <span class="position">北温</span>
+                                            <span class="nameinner">362 Lawrence Ave W362 Lawrence Ave W</span>
+                                        </div>
+                                    </div>
+                                    <div class="hotdetail clearfix">
+                                        <div class="hotinfo fl">
+                                            <p class="p1">别墅，3卧</p>
+                                            <p class="p1 p2">1980平方英尺</p>
+                                        </div>
+                                        <div class="price fr">
+                                            <div class="embox">
+                                                <em class="em1 customfont">1298.00</em>
+                                                <em class="em2">万</em>
+                                            </div>
+                                            <div class="money">加币</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bottom-box"></div>
+
+
+    </div>
+</body>
+</html>
