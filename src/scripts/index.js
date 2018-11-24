@@ -83,7 +83,6 @@ function bannerSwiper(){
 function sizecheck(){
     var winWidth = window.innerWidth;
     if(winWidth<1460){
-        $('.changesize').addClass('small');
 
         // 精选学区房
         $('.schoolhouse').addClass('smallschoolhouse');
@@ -98,7 +97,6 @@ function sizecheck(){
         // 进程
         $('.progress-group').addClass('smallprogress-group');
     }else{
-        $('.changesize').removeClass('small');
 
         $('.schoolhouse').removeClass('smallschoolhouse');
         $('.slast').removeClass('hide');

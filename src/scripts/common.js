@@ -10,8 +10,13 @@ $(function(){
         Limg()
     }
 
+	window.onresize=function(){  
+        sizechange();
+   }  
+   	
 	commonTop();
 	commonBottom();
+	sizechange();
 
 });
 
@@ -135,5 +140,15 @@ function commonBottom(){
 			'<div class="bottom"></div>'
 		)
 	}
+}
+
+function sizechange(){
+    var winWidth = window.innerWidth;
+    if(winWidth<1460){
+        $('.changesize').addClass('small');
+
+    }else{
+        $('.changesize').removeClass('small');
+    }
 }
 

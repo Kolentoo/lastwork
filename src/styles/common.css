@@ -114,6 +114,8 @@ font-size: 14px;position: absolute;top: 0;right: 0;}
 .pager .pg-prev:hover{
 	background-position: 0 -28px;
 }
+.pager .pg-prev:after {content: "上一页"}
+.pager .pg-next:after {content: "下一页"}
 .pager .pg-next,
 .pager .pg-next:hover{
 	background-position: -29px -28px;
@@ -126,6 +128,7 @@ font-size: 14px;position: absolute;top: 0;right: 0;}
 .pager .pg-prev[disabled='true']:hover{
 	cursor: default;
 	background-image: url(images/page_bg.jpg);
+	
 }
 .pager .pg-next[disabled='true'],
 .pager .pg-next[disabled='true']:hover{
@@ -206,7 +209,7 @@ font-size: 14px;position: absolute;top: 0;right: 0;}
 .icon-rightarrow2 {background: url('../images/index/right.png') no-repeat;width: 7px;height: 11px;display: inline-block;}
 .icon-right3 {background: url('../images/index/icons.png') no-repeat -53px -91px;width: 7px;height: 12px;display: inline-block;}
 
-.list-location {background: url('../images/secondhandlist/listicons.png') no-repeat -219px -20px;width: 98px;height: 30px;display: inline-block;}
+.list-location2 {background: url('../images/secondhandlist/listicons.png') no-repeat -219px -20px;width: 98px;height: 30px;display: inline-block;}
 .list-sele1 {background: url('../images/secondhandlist/listicons.png') no-repeat -219px -20px;width: 98px;height: 30px;display: inline-block;}
 .list-down {background: url('../images/secondhandlist/listicons.png') no-repeat -200px 0px;width: 10px;height: 6px;display: inline-block;}
 .list-query {background: url('../images/secondhandlist/listicons.png') no-repeat -220px 0px;width: 11px;height: 11px;display: inline-block;}

@@ -2,8 +2,8 @@
 .breadbox .bread-position {line-height: 40px;}
 .breadbox .bread-position a{font-size: 14px;color: #8e8e93;}
 .breadbox .bread-position .icon-right3 {position: relative;top: 1px;margin:0 1px;}
-.breadbox .list-location {text-align: right;margin-top: 6px;}
-.breadbox .list-location .p1 {color:#fff;font-size: 14px;line-height: 30px;margin-right: 10px;}
+.breadbox .list-location2 {text-align: right;margin-top: 6px;}
+.breadbox .list-location2 .p1 {color:#fff;font-size: 14px;line-height: 30px;margin-right: 10px;}
 
 .selectbox {border-radius: 1px;border: solid 1px #eee;margin-top: 20px;transition:all ease 0.3s;height: 195px;overflow: hidden;}
 .selectboxon {height: auto;}
@@ -27,10 +27,14 @@ line-height: 36px;}
 .selectbox .price-input em{font-size: 14px;margin-left: 2px;}
 
 
-.changesize {width: 72px;height: 22px;background-color: #f6f6f6;border-radius: 100px;border: solid 1px #dcdcdc;
-display: inline-block;line-height: 22px;color: #8e8e93;font-size: 14px;}
+.secondsize {width: 76px;height: 22px;background-color: #f6f6f6;border-radius: 100px;border: solid 1px #dcdcdc;
+display: inline-block;line-height: 22px;color: #8e8e93;font-size: 14px;position: relative;top: 4px;}
+.otherchoose .secondsize {margin-top: 8px;top: 0;}
+.sizecon {display: inline-block;width: 76px;}
 .sizecon span{display: inline-block;}
-.sizeon {width: 41px;height: 22px;background:#f76b1c;border-radius: 100px;color:#fff;text-align: center;}
+.sizecon .yc {text-align: center;width: 38px;}
+.sizecon .mi {text-align: center;width: 38px;}
+.sizecon .sizeon {width: 38px;height: 22px;background:#f76b1c;border-radius: 100px;color:#fff;text-align: center;}
 .showmore {background: url('../images/secondhandlist/showmore.png') no-repeat center center;height: 45px;}
 .morebtn {background: url('../images/secondhandlist/mbtn.png') no-repeat center center;width: 98px;height: 34px;line-height: 34px;
 text-align: center;cursor: pointer;font-size: 14px;color: #3b9df8;margin:0 auto;position: relative;top: -2px;}
@@ -45,6 +49,7 @@ text-align: center;cursor: pointer;font-size: 14px;color: #3b9df8;margin:0 auto;
 .choosen .optionlist .s2 {font-size: 14px;color: #a3a3a3;}
 .choosen .optionlist .list-clean {position: relative;top: 3px;}
 .choosen .optionlist .list-save {position: relative;top: 3px;}
+.choosen .list-close {margin-left: 5px;}
 
 .main-pro {width: 900px;}
 .housechoose {margin-top: 10px;}
@@ -81,7 +86,8 @@ transform:scale(1,1);}
 .houselist .detail {margin-left: 20px;}
 .houselist .namebox {margin:10px 0 7px 0;}
 .houselist .namebox .list-name {margin-top: 5px;}
-.houselist .namebox a{color: #007dbf;font-size: 18px;}
+.houselist .namebox a{color: #007dbf;font-size: 18px;overflow-x: hidden;white-space: nowrap;text-overflow:ellipsis;width: 400px;
+display: block;}
 .houselist .locationbox {margin-bottom: 5px;}
 .houselist .locationbox .p1 {color: #ff7700;font-size: 14px;}
 .houselist .infobox {margin-bottom: 5px;}
@@ -106,7 +112,8 @@ margin:10px 0 0 50px;}
 .manage .manage-head {width: 20px;height: 20px;border-radius:50%;margin-top: 2px;margin-left: 5px;}
 .manage p{line-height: 25px;}
 .manage .p1 {font-size: 14px;color:#555;margin-left: 5px;}
-.manage .p2 {font-size: 14px;color:#888;margin-left: 5px;}
+.manage .p2 {font-size: 14px;color:#888;margin-left: 5px;overflow-x: hidden;white-space: nowrap;text-overflow:ellipsis;
+width: 620px;}
 .manage .managebtn {background: url('../images/secondhandlist/listicons.png') no-repeat -60px -20px;width: 64px;height: 20px;
 line-height: 20px;text-align: center;color:#fff;font-size: 12px;margin: 2px 5px 0 0;}
 
@@ -120,11 +127,11 @@ font-size: 18px;line-height: 44px;color:#fff;}
 .hothouse .hottitle .list-hot {position: relative;top: 5px;margin-right: 10px;}
 .hotbody {border: solid 1px #e7e7e7;border-top: none;padding-top: 5px;width: 280px;margin:-2px auto;}
 .hotbody .hotcon {width:270px;margin:0 auto;}
-.hotlist {background: #fff;width: 270px;margin-bottom: 10px;}
+.hotlist {background: #fff;width: 270px;margin-bottom: 10px;overflow: hidden;}
 .hotlist .chart {width: 270px;position: relative;box-shadow: 0px 2px 4px 0px 
     rgba(249, 249, 249, 0.84);}
 .hotlist .chart .proname {position: absolute;height: 30px;background: rgba(0,0,0,0.6);bottom: 0;left: 0;
-color:#fff;}
+color:#fff;overflow-x: hidden;white-space: nowrap;text-overflow:ellipsis;width: 100%;}
 .hotlist .icon-location2 {position: relative;top: 3px;}
 .hotlist .chart .proname .position {font-size: 16px;}
 .hotlist .chart .proname .nameinner {font-size: 14px;}
